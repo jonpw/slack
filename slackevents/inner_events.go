@@ -14,20 +14,7 @@ type EventsAPIInnerEvent struct {
 
 // AppMentionEvent is an (inner) EventsAPI subscribable event.
 type AppMentionEvent struct {
-	Type            string `json:"type"`
-	User            string `json:"user"`
-	Text            string `json:"text"`
-	TimeStamp       string `json:"ts"`
-	ThreadTimeStamp string `json:"thread_ts"`
-	Channel         string `json:"channel"`
-	EventTimeStamp  string `json:"event_ts"`
-
-	// When Message comes from a channel that is shared between workspaces
-	UserTeam   string `json:"user_team,omitempty"`
-	SourceTeam string `json:"source_team,omitempty"`
-
-	// BotID is filled out when a bot triggers the app_mention event
-	BotID string `json:"bot_id,omitempty"`
+	MessageEvent
 }
 
 // AppHomeOpenedEvent Your Slack app home was opened.
